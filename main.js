@@ -1,4 +1,18 @@
 import Lenis from '@studio-freight/lenis';
+import { initGLSLHills } from './glsl-hills.js';
+import { initTunnelHero } from './tunnel-hero.js';
+
+/* ========== GLSL HILLS BACKGROUND ========== */
+const aboutSection = document.getElementById('about');
+if (aboutSection) {
+  initGLSLHills(aboutSection, { cameraZ: 125, planeSize: 256, speed: 0.4 });
+}
+
+/* ========== TUNNEL HERO BACKGROUND ========== */
+const tunnelSection = document.getElementById('tunnel-cta');
+if (tunnelSection) {
+  initTunnelHero(tunnelSection);
+}
 
 /* ========== SMOOTH SCROLLING (LENIS) ========== */
 const lenis = new Lenis({
@@ -20,7 +34,7 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// Anchor link smooth scrolling with Lenis
+// Anchor link smooth scrolling with Lenis (single listener, no duplicates)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -58,9 +72,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const navbar = document.getElementById('navbar');
 let lastScroll = 0;
 
+/* ========== PARALLAX EFFECT (merged into single scroll listener) ========== */
+const heroBulb = document.querySelector('.hero-bulb');
+const heroGlow = document.querySelector('.hero-glow');
+
+// Single passive scroll listener for navbar + parallax
 window.addEventListener('scroll', () => {
   const currentScroll = window.scrollY;
   
+  // Navbar show/hide + scroll class
   if (currentScroll > 60) {
     navbar.classList.add('scrolled');
   } else {
@@ -74,7 +94,14 @@ window.addEventListener('scroll', () => {
   }
   
   lastScroll = currentScroll;
-});
+
+  // Parallax (only near the top)
+  if (currentScroll < 1200) {
+    const offset = currentScroll * 0.15;
+    if (heroBulb) heroBulb.style.transform = `translateY(calc(-50% + ${offset}px))`;
+    if (heroGlow) heroGlow.style.transform = `translateY(calc(-50% + ${offset * 0.5}px))`;
+  }
+}, { passive: true });
 
 /* ========== MOBILE MENU ========== */
 const menuToggle = document.getElementById('menuToggle');
@@ -107,19 +134,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
 revealElements.forEach(el => revealObserver.observe(el));
-
-/* ========== PARALLAX EFFECT ========== */
-const heroBulb = document.querySelector('.hero-bulb');
-const heroGlow = document.querySelector('.hero-glow');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  if (scrollY < 1200) {
-    const offset = scrollY * 0.15;
-    if (heroBulb) heroBulb.style.transform = `translateY(calc(-50% + ${offset}px))`;
-    if (heroGlow) heroGlow.style.transform = `translateY(calc(-50% + ${offset * 0.5}px))`;
-  }
-}, { passive: true });
 
 /* ========== COUNTER ANIMATION ========== */
 const counters = document.querySelectorAll('[data-count]');
@@ -165,16 +179,5 @@ serviceCards.forEach(card => {
 
   card.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-  });
-});
-
-/* ========== SMOOTH ANCHOR SCROLLING ========== */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
   });
 });
