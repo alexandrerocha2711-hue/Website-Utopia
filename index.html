@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utopia Solutions — Arquitetura Digital & Inteligência Artificial</title>
+  <meta name="description" content="Transformamos operações tradicionais em sistemas inteligentes, automatizados e escaláveis." />
+  <link rel="icon" type="image/png" href="/assets/logo-dark.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-logo"><img src="/assets/logo-dark.png" alt="Utopia Solutions" /></a>
+      <div class="navbar-links" id="navLinks">
+        <a href="#about">Sobre</a>
+        <div class="nav-dropdown">
+          <a href="#services">Serviços ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="/pages/agentes-ia.html"><span class="dd-icon">🤖</span> Agentes de IA</a>
+            <a href="/pages/automacao.html"><span class="dd-icon">⚡</span> Automação</a>
+            <a href="/pages/integracao.html"><span class="dd-icon">🔗</span> Integração</a>
+            <a href="/pages/landing-pages.html"><span class="dd-icon">🖥️</span> Landing Pages</a>
+            <a href="/pages/base-conhecimento.html"><span class="dd-icon">🧠</span> Base RAG</a>
+            <a href="/pages/saas.html"><span class="dd-icon">🚀</span> SaaS</a>
+          </div>
+        </div>
+        <a href="#results">Resultados</a>
+        <a href="#testimonials">Depoimentos</a>
+        <a href="https://wa.me/5527999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Utopia%20Solutions." target="_blank" class="btn-cta">Fale Conosco <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bulb">
+      <svg viewBox="0 0 500 700" fill="none" xmlns="http://www.w3.org/2000/svg" class="bulb-svg">
+        <defs>
+          <!-- Main green glow -->
+          <radialGradient id="bulbGlow" cx="50%" cy="35%" r="45%">
+            <stop offset="0%" stop-color="#00FF41" stop-opacity="0.35"/>
+            <stop offset="50%" stop-color="#00FF41" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#00FF41" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Inner light gradient -->
+          <radialGradient id="innerLight" cx="50%" cy="40%" r="30%">
+            <stop offset="0%" stop-color="#33FF66" stop-opacity="0.6"/>
+            <stop offset="60%" stop-color="#00FF41" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#00FF41" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Glass reflection -->
+          <linearGradient id="glassShine" x1="30%" y1="0%" x2="70%" y2="100%">
+            <stop offset="0%" stop-color="white" stop-opacity="0.12"/>
+            <stop offset="50%" stop-color="white" stop-opacity="0.02"/>
+            <stop offset="100%" stop-color="white" stop-opacity="0.06"/>
+          </linearGradient>
+          <!-- Filament glow filter -->
+          <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+          </filter>
+          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="12" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+          </filter>
+          <filter id="bigGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="30"/>
+          </filter>
+        </defs>
+
+        <!-- === AMBIENT GLOW === -->
+        <ellipse cx="250" cy="260" rx="220" ry="250" fill="url(#bulbGlow)">
+          <animate attributeName="rx" values="220;240;220" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="ry" values="250;270;250" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+        </ellipse>
+
+        <!-- === VOLUMETRIC LIGHT RAYS === -->
+        <g opacity="0.15">
+          <line x1="250" y1="250" x2="60" y2="50" stroke="#00FF41" stroke-width="1.5">
+            <animate attributeName="opacity" values="0.1;0.3;0.1" dur="3s" repeatCount="indefinite"/>
+          </line>
+          <line x1="250" y1="250" x2="440" y2="30" stroke="#00FF41" stroke-width="1">
+            <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3.5s" repeatCount="indefinite"/>
+          </line>
+          <line x1="250" y1="250" x2="30" y2="200" stroke="#00FF41" stroke-width="1">
+            <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="250" y1="250" x2="470" y2="180" stroke="#00FF41" stroke-width="1.5">
+            <animate attributeName="opacity" values="0.12;0.28;0.12" dur="3.2s" repeatCount="indefinite"/>
+          </line>
+          <line x1="250" y1="250" x2="100" y2="10" stroke="#00FF41" stroke-width="0.8">
+            <animate attributeName="opacity" values="0.08;0.2;0.08" dur="4.5s" repeatCount="indefinite"/>
+          </line>
+          <line x1="250" y1="250" x2="400" y2="80" stroke="#00FF41" stroke-width="0.8">
+            <animate attributeName="opacity" values="0.1;0.22;0.1" dur="3.8s" repeatCount="indefinite"/>
+          </line>
+        </g>
+
+        <!-- === BULB GLASS BODY === -->
+        <path d="M250 80 C140 80, 80 170, 80 270 C80 350, 120 400, 170 440 C180 448, 185 465, 185 480 L315 480 C315 465, 320 448, 330 440 C380 400, 420 350, 420 270 C420 170, 360 80, 250 80Z" 
+          fill="rgba(0,255,65,0.03)" stroke="rgba(0,255,65,0.25)" stroke-width="1.5"/>
+        <!-- Glass reflection -->
+        <path d="M250 80 C140 80, 80 170, 80 270 C80 350, 120 400, 170 440 C180 448, 185 465, 185 480 L315 480 C315 465, 320 448, 330 440 C380 400, 420 350, 420 270 C420 170, 360 80, 250 80Z" 
+          fill="url(#glassShine)"/>
+        <!-- Left highlight arc -->
+        <path d="M145 160 C155 130, 190 100, 230 90" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+        <!-- === INNER LIGHT CORE === -->
+        <ellipse cx="250" cy="280" rx="100" ry="110" fill="url(#innerLight)">
+          <animate attributeName="rx" values="100;115;100" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="ry" values="110;125;110" dur="3s" repeatCount="indefinite"/>
+        </ellipse>
+
+        <!-- === NEURAL NETWORK FILAMENT === -->
+        <g filter="url(#neonGlow)">
+          <!-- Central stem -->
+          <line x1="250" y1="460" x2="250" y2="320" stroke="#00FF41" stroke-width="2" opacity="0.9"/>
+          <!-- Branch nodes -->
+          <circle cx="250" cy="320" r="4" fill="#00FF41" opacity="0.9"/>
+          <circle cx="210" cy="270" r="3.5" fill="#33FF66" opacity="0.85"/>
+          <circle cx="290" cy="275" r="3.5" fill="#33FF66" opacity="0.85"/>
+          <circle cx="230" cy="220" r="3" fill="#00FF41" opacity="0.8"/>
+          <circle cx="275" cy="215" r="3" fill="#00FF41" opacity="0.8"/>
+          <circle cx="250" cy="180" r="4" fill="#33FF66" opacity="0.9"/>
+          <circle cx="195" cy="200" r="2.5" fill="#00FF41" opacity="0.7"/>
+          <circle cx="305" cy="210" r="2.5" fill="#00FF41" opacity="0.7"/>
+          <circle cx="220" cy="160" r="2.5" fill="#33FF66" opacity="0.75"/>
+          <circle cx="280" cy="155" r="2.5" fill="#33FF66" opacity="0.75"/>
+          <circle cx="250" cy="140" r="3" fill="#00FF41" opacity="0.8"/>
+
+          <!-- Neural connections -->
+          <line x1="250" y1="320" x2="210" y2="270" stroke="#00FF41" stroke-width="1.2" opacity="0.7"/>
+          <line x1="250" y1="320" x2="290" y2="275" stroke="#00FF41" stroke-width="1.2" opacity="0.7"/>
+          <line x1="210" y1="270" x2="230" y2="220" stroke="#00FF41" stroke-width="1" opacity="0.6"/>
+          <line x1="290" y1="275" x2="275" y2="215" stroke="#00FF41" stroke-width="1" opacity="0.6"/>
+          <line x1="210" y1="270" x2="195" y2="200" stroke="#00FF41" stroke-width="0.8" opacity="0.5"/>
+          <line x1="290" y1="275" x2="305" y2="210" stroke="#00FF41" stroke-width="0.8" opacity="0.5"/>
+          <line x1="230" y1="220" x2="250" y2="180" stroke="#00FF41" stroke-width="1" opacity="0.6"/>
+          <line x1="275" y1="215" x2="250" y2="180" stroke="#00FF41" stroke-width="1" opacity="0.6"/>
+          <line x1="195" y1="200" x2="220" y2="160" stroke="#00FF41" stroke-width="0.8" opacity="0.5"/>
+          <line x1="305" y1="210" x2="280" y2="155" stroke="#00FF41" stroke-width="0.8" opacity="0.5"/>
+          <line x1="220" y1="160" x2="250" y2="140" stroke="#00FF41" stroke-width="1" opacity="0.6"/>
+          <line x1="280" y1="155" x2="250" y2="140" stroke="#00FF41" stroke-width="1" opacity="0.6"/>
+          <!-- Cross connections for neural network density -->
+          <line x1="210" y1="270" x2="275" y2="215" stroke="#00FF41" stroke-width="0.5" opacity="0.3"/>
+          <line x1="290" y1="275" x2="230" y2="220" stroke="#00FF41" stroke-width="0.5" opacity="0.3"/>
+          <line x1="195" y1="200" x2="250" y2="180" stroke="#00FF41" stroke-width="0.5" opacity="0.3"/>
+          <line x1="305" y1="210" x2="250" y2="180" stroke="#00FF41" stroke-width="0.5" opacity="0.3"/>
+        </g>
+
+        <!-- === ENERGY PULSES traveling up the network === -->
+        <circle r="3" fill="#00FF41" opacity="0.9" filter="url(#softGlow)">
+          <animateMotion dur="2.5s" repeatCount="indefinite" path="M250,460 L250,320 L210,270 L230,220 L250,180 L250,140"/>
+          <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="2.5" fill="#33FF66" opacity="0.8" filter="url(#softGlow)">
+          <animateMotion dur="3s" repeatCount="indefinite" begin="0.8s" path="M250,460 L250,320 L290,275 L275,215 L250,180 L250,140"/>
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite" begin="0.8s"/>
+        </circle>
+        <circle r="2" fill="#00FF41" opacity="0.7" filter="url(#softGlow)">
+          <animateMotion dur="3.5s" repeatCount="indefinite" begin="1.5s" path="M250,460 L250,320 L210,270 L195,200 L220,160 L250,140"/>
+          <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.5s" repeatCount="indefinite" begin="1.5s"/>
+        </circle>
+
+        <!-- === FLOATING PARTICLES around bulb === -->
+        <g opacity="0.6">
+          <circle cx="140" cy="200" r="2" fill="#00FF41">
+            <animate attributeName="cy" values="200;180;200" dur="5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="370" cy="170" r="1.5" fill="#33FF66">
+            <animate attributeName="cy" values="170;145;170" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="110" cy="310" r="1.5" fill="#00FF41">
+            <animate attributeName="cy" values="310;290;310" dur="6s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="6s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="400" cy="280" r="2" fill="#33FF66">
+            <animate attributeName="cy" values="280;255;280" dur="4.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="160" cy="130" r="1" fill="#00FF41">
+            <animate attributeName="cy" values="130;110;130" dur="3.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="350" cy="350" r="1" fill="#33FF66">
+            <animate attributeName="cy" values="350;330;350" dur="5.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="5.5s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+
+        <!-- === BULB BASE (screw cap) === -->
+        <rect x="185" y="480" width="130" height="12" rx="3" fill="#1a1a1a" stroke="rgba(0,255,65,0.15)" stroke-width="1"/>
+        <rect x="190" y="496" width="120" height="10" rx="3" fill="#141414" stroke="rgba(0,255,65,0.1)" stroke-width="1"/>
+        <rect x="195" y="510" width="110" height="10" rx="3" fill="#111111" stroke="rgba(0,255,65,0.08)" stroke-width="1"/>
+        <rect x="200" y="524" width="100" height="10" rx="3" fill="#0e0e0e" stroke="rgba(0,255,65,0.06)" stroke-width="1"/>
+        <rect x="210" y="538" width="80" height="12" rx="6" fill="#0a0a0a" stroke="rgba(0,255,65,0.04)" stroke-width="1"/>
+
+        <!-- === BRIGHT CENTER GLOW (behind glass) === -->
+        <ellipse cx="250" cy="260" rx="60" ry="70" fill="#00FF41" opacity="0.06" filter="url(#bigGlow)">
+          <animate attributeName="opacity" values="0.04;0.1;0.04" dur="3s" repeatCount="indefinite"/>
+        </ellipse>
+      </svg>
+    </div>
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="section-label">Prazer, somos a Utopia.</span>
+        <h1>
+          <span class="line">Think <span class="neon-text">IA.</span></span>
+          <span class="line">Build Solutions.</span>
+          <span class="line">Create <span class="neon-text">Tomorrow.</span></span>
+        </h1>
+        <p class="hero-subtitle">Arquitetura digital completa para empresas que querem operar no próximo nível. IA, automação e SaaS construídos sob medida.</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20conversar%20com%20a%20Utopia." target="_blank" class="btn-cta">Conversar com a Utopia <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#services" class="btn-secondary">Ver soluções</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric"><div class="metric-value" data-count="3">0×</div><div class="metric-label">ganho médio de eficiência</div></div>
+          <div class="metric"><div class="metric-value">24/7</div><div class="metric-label">operação autônoma</div></div>
+          <div class="metric"><div class="metric-value">−80%</div><div class="metric-label">tempo em tarefas repetitivas</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS — Full Screen -->
+  <section class="about about-fullscreen" id="about">
+    <div class="about-inner">
+      <div class="about-header reveal">
+        <span class="section-label">Quem Somos</span>
+        <h2 class="section-title">Não somos uma agência.<br/><span class="highlight">Somos arquitetos digitais.</span></h2>
+        <p class="section-subtitle" style="max-width:720px;margin:0 auto 16px;">Construímos a infraestrutura completa por trás de operações inteligentes. Marketing, tecnologia e IA operando como um único sistema, pensado para escalar sem depender de esforço humano.</p>
+        <p class="section-subtitle" style="max-width:720px;margin:0 auto;">Cada projeto é uma arquitetura sob medida. Do primeiro lead capturado ao processo interno automatizado, tudo conectado, mensurável e rodando 24/7.</p>
+      </div>
+
+      <!-- Missão, Visão e Valores -->
+      <div class="mvv-grid reveal reveal-stagger">
+        <div class="mvv-card">
+          <div class="mvv-icon">🎯</div>
+          <h4 class="mvv-title">Missão</h4>
+          <p class="mvv-desc">Tornar a operação das empresas mais simples, autônoma e inteligente.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-icon">🔭</div>
+          <h4 class="mvv-title">Visão</h4>
+          <p class="mvv-desc">Ser a maior empresa de IA e inovação do Brasil.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-icon">💎</div>
+          <h4 class="mvv-title">Valores</h4>
+          <p class="mvv-desc">Desenvolvimento humano. Execução eficaz. Tecnologia com propósito.</p>
+        </div>
+      </div>
+
+      <!-- Pilares -->
+      <div class="about-pillars reveal reveal-stagger">
+        <div class="pillar-card">
+          <div class="pillar-icon">⚙️</div>
+          <div class="pillar-number">PILAR 01</div>
+          <div class="pillar-title">Núcleo de Tecnologia & IA</div>
+          <div class="pillar-desc">Agentes de IA humanizados, automação de processos e integração entre sistemas. A camada que faz sua operação rodar sem você.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">📈</div>
+          <div class="pillar-number">PILAR 02</div>
+          <div class="pillar-title">Marketing & Aquisição</div>
+          <div class="pillar-desc">Tráfego, funis e conversão construídos sobre dados. Aquisição previsível, com CAC sob controle.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🚀</div>
+          <div class="pillar-number">PILAR 03</div>
+          <div class="pillar-title">Produtos SaaS</div>
+          <div class="pillar-desc">Plataformas próprias, CRMs com IA e sistemas de gestão escaláveis. Software pensado para crescer com você.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES BENTO GRID -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-label">Nossos Serviços</span>
+        <h2 class="section-title">Soluções que geram resultado <span class="highlight">mensurável.</span></h2>
+        <p class="section-subtitle">Uma arquitetura digital completa, construída do diagnóstico ao deploy.</p>
+      </div>
+      <div class="bento-grid">
+        <a href="/pages/agentes-ia.html" class="bento-item large reveal">
+          <div class="bento-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+          <div class="bento-icon">🤖</div>
+          <h3>Agentes de IA — SDR & Atendimento</h3>
+          <p>Atende, qualifica e agenda 24/7 via WhatsApp, integrado ao seu CRM.</p>
+          <div class="bento-tag">↑ conversão · ↓ custo de atendimento</div>
+        </a>
+        <a href="/pages/automacao.html" class="bento-item medium reveal">
+          <div class="bento-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+          <div class="bento-icon">⚡</div>
+          <h3>Automação de Processos</h3>
+          <p>Cobrança, onboarding e relatórios rodando sem toque humano.</p>
+          <div class="bento-tag">−80% tempo operacional</div>
+        </a>
+        <a href="/pages/integracao.html" class="bento-item wide reveal">
+          <div class="bento-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+          <div class="bento-icon">🔗</div>
+          <h3>Integração de Sistemas</h3>
+          <p>CRM, ERP, pagamentos e marketing operando como uma única camada.</p>
+          <div class="bento-tag">Zero retrabalho · Zero dado perdido</div>
+        </a>
+        <a href="/pages/landing-pages.html" class="bento-item wide reveal">
+          <div class="bento-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+          <div class="bento-icon">🖥️</div>
+          <h3>Landing Pages de Alta Conversão</h3>
+          <p>Next.js com Pixel, GTM, SSL e funil automatizado de ponta a ponta.</p>
+          <div class="bento-tag">Conversão mensurada e otimizada</div>
+        </a>
+        <a href="/pages/base-conhecimento.html" class="bento-item normal reveal">
+          <div class="bento-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+          <div class="bento-icon">🧠</div>
+          <h3>Base de Conhecimento (RAG)</h3>
+          <p>IA treinada com seus documentos, processos e histórico.</p>
+          <div class="bento-tag">−90% tempo de onboarding</div>
+        </a>
+        <a href="/pages/saas.html" class="bento-item normal reveal">
+          <div class="bento-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+          <div class="bento-icon">🚀</div>
+          <h3>Desenvolvimento SaaS & BI</h3>
+          <p>Plataformas, dashboards e produtos escaláveis construídos do zero.</p>
+          <div class="bento-tag">Do MVP ao produto pronto pra escalar</div>
+        </a>
+        <a href="/pages/saas.html" class="bento-item normal reveal">
+          <div class="bento-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+          <div class="bento-icon">📊</div>
+          <h3>BI & Dashboards</h3>
+          <p>Decisões em tempo real com dados visuais.</p>
+          <div class="bento-tag">Inteligência de dados</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS MARQUEE -->
+  <section class="results" id="results">
+    <div class="container" style="text-align:center;margin-bottom:48px;">
+      <div class="reveal">
+        <span class="section-label">Resultados</span>
+        <h2 class="section-title">Os números falam <span class="highlight">por nós.</span></h2>
+      </div>
+    </div>
+    <div class="results-marquee">
+      <div class="result-item"><div class="result-number" data-count="80">0%</div><div class="result-text">redução no tempo operacional</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number" data-count="90">0%</div><div class="result-text">redução no tempo de onboarding</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number">24/7</div><div class="result-text">operação autônoma</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number" data-count="3">0×</div><div class="result-text">ganho de eficiência</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number" data-count="73">0%</div><div class="result-text">dos leads resgatados com IA</div></div>
+      <div class="result-divider"></div>
+      <!-- duplicate for infinite scroll -->
+      <div class="result-item"><div class="result-number">80%</div><div class="result-text">redução no tempo operacional</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number">90%</div><div class="result-text">redução no tempo de onboarding</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number">24/7</div><div class="result-text">operação autônoma</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number">3×</div><div class="result-text">ganho de eficiência</div></div>
+      <div class="result-divider"></div>
+      <div class="result-item"><div class="result-number">73%</div><div class="result-text">dos leads resgatados com IA</div></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <span class="section-label">Depoimentos</span>
+        <h2 class="section-title">O que nossos clientes <span class="highlight">dizem.</span></h2>
+      </div>
+    </div>
+    <div class="testimonials-track">
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"A Utopia transformou completamente nossa operação. O agente de IA atende nossos leads 24h e nosso time comercial só foca no fechamento. Conversão triplicou."</p><div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">Marcos Oliveira</div><div class="testimonial-role">CEO · TechScale</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"Eliminamos 80% das tarefas repetitivas. Cobrança, follow-up, onboarding — tudo roda sozinho agora. Recomendo demais."</p><div class="testimonial-author"><div class="testimonial-avatar">C</div><div><div class="testimonial-name">Carolina Mendes</div><div class="testimonial-role">COO · GrowthLab</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"A integração dos nossos sistemas foi cirúrgica. CRM, ERP, pagamento — tudo conectado. Zero retrabalho, zero dado perdido."</p><div class="testimonial-author"><div class="testimonial-avatar">R</div><div><div class="testimonial-name">Ricardo Santos</div><div class="testimonial-role">CTO · DataFlow</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"Nossa LP convertia 2%. Depois da Utopia, com funil automatizado e IA no WhatsApp, batemos 12%. ROI real."</p><div class="testimonial-author"><div class="testimonial-avatar">A</div><div><div class="testimonial-name">Ana Beatriz Lima</div><div class="testimonial-role">Head de Marketing · InnovaHub</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"O Oráculo RAG respondeu em 2 semanas o que nosso suporte levava meses para documentar. Onboarding caiu de 30 dias para 3."</p><div class="testimonial-author"><div class="testimonial-avatar">F</div><div><div class="testimonial-name">Felipe Duarte</div><div class="testimonial-role">Diretor de Ops · ScaleUp</div></div></div></div>
+      <!-- duplicate -->
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"A Utopia transformou completamente nossa operação. O agente de IA atende nossos leads 24h e nosso time comercial só foca no fechamento. Conversão triplicou."</p><div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">Marcos Oliveira</div><div class="testimonial-role">CEO · TechScale</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"Eliminamos 80% das tarefas repetitivas. Cobrança, follow-up, onboarding — tudo roda sozinho agora. Recomendo demais."</p><div class="testimonial-author"><div class="testimonial-avatar">C</div><div><div class="testimonial-name">Carolina Mendes</div><div class="testimonial-role">COO · GrowthLab</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"A integração dos nossos sistemas foi cirúrgica. CRM, ERP, pagamento — tudo conectado. Zero retrabalho, zero dado perdido."</p><div class="testimonial-author"><div class="testimonial-avatar">R</div><div><div class="testimonial-name">Ricardo Santos</div><div class="testimonial-role">CTO · DataFlow</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"Nossa LP convertia 2%. Depois da Utopia, com funil automatizado e IA no WhatsApp, batemos 12%. ROI real."</p><div class="testimonial-author"><div class="testimonial-avatar">A</div><div><div class="testimonial-name">Ana Beatriz Lima</div><div class="testimonial-role">Head de Marketing · InnovaHub</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote">"</div><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"O Oráculo RAG respondeu em 2 semanas o que nosso suporte levava meses para documentar. Onboarding caiu de 30 dias para 3."</p><div class="testimonial-author"><div class="testimonial-avatar">F</div><div><div class="testimonial-name">Felipe Duarte</div><div class="testimonial-role">Diretor de Ops · ScaleUp</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contact">
+    <div class="cta-final-bg"></div>
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Próximo Passo</span>
+        <h2 class="section-title">O próximo nível da sua operação<br/>começa por uma <span class="highlight">conversa.</span></h2>
+        <p class="section-subtitle">Em 30 minutos, mapeamos onde sua empresa ganha tempo, reduz custo e escala com inteligência.</p>
+        <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20agendar%20um%20diagnóstico%20com%20a%20Utopia." target="_blank" class="btn-cta">Agendar diagnóstico <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="/assets/logo-dark.png" alt="Utopia" /><p>Arquitetura Digital & IA para negócios. Sistemas inteligentes que escalam sozinhos.</p></div>
+        <div><h4>Navegação</h4><ul><li><a href="#hero">Home</a></li><li><a href="#about">Sobre</a></li><li><a href="#services">Serviços</a></li><li><a href="#results">Resultados</a></li></ul></div>
+        <div><h4>Serviços</h4><ul><li><a href="/pages/agentes-ia.html">Agentes de IA</a></li><li><a href="/pages/automacao.html">Automação</a></li><li><a href="/pages/integracao.html">Integração</a></li><li><a href="/pages/landing-pages.html">Landing Pages</a></li><li><a href="/pages/base-conhecimento.html">Base RAG</a></li><li><a href="/pages/saas.html">SaaS</a></li></ul></div>
+        <div><h4>Contato</h4><ul><li><a href="https://wa.me/5527999999999" target="_blank">WhatsApp</a></li><li><a href="https://utopiasolutions.com.br">utopiasolutions.com.br</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 Utopia Solutions · Todos os direitos reservados</p><span class="footer-tags">arquitetura digital · inteligência artificial · automação · sistemas escaláveis</span></div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
