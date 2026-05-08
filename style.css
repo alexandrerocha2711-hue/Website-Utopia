@@ -857,3 +857,29 @@ section { position: relative; contain: layout style; }
 .faq-content {
   padding: 0 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;
 }
+
+/* Responsive Split Grid */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .split-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .split-grid .order-first-mobile {
+    order: -1;
+  }
+  .split-grid .about-header {
+    text-align: center !important;
+  }
+  .split-grid .split-title {
+    font-size: 2.4rem !important;
+  }
+  .split-grid .split-box {
+    padding: 32px !important;
+  }
+}
