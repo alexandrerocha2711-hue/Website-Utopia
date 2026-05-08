@@ -120,9 +120,12 @@ export function initTunnelHero(container) {
     renderer.render(scene, camera);
   }
 
+  let lastCw = 0;
   function resize() {
     const cw = container.offsetWidth;
     const ch = container.offsetHeight;
+    if (Math.abs(cw - lastCw) < 50 && lastCw !== 0) return; // Ignore mobile height jumps
+    lastCw = cw;
     const dp = Math.min(window.devicePixelRatio || 1, 1.5);
     renderer.setPixelRatio(dp);
     renderer.setSize(cw, ch);
