@@ -55,8 +55,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         // Close mobile menu if open
         const navLinks = document.getElementById('navLinks');
         const menuToggle = document.getElementById('menuToggle');
+        const navbarMobileLenis = document.getElementById('navbar');
         if (navLinks && navLinks.classList.contains('open')) {
           navLinks.classList.remove('open');
+          if (navbarMobileLenis) navbarMobileLenis.classList.remove('menu-open');
           document.body.style.overflow = '';
           if (menuToggle) {
             const spans = menuToggle.querySelectorAll('span');
@@ -110,16 +112,19 @@ window.addEventListener('scroll', () => {
 /* ========== MOBILE MENU ========== */
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
+const navbarMobile = document.getElementById('navbar');
 
-if (menuToggle) {
+if (menuToggle && navLinks && navbarMobile) {
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    navbarMobile.classList.toggle('menu-open');
     document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      navbarMobile.classList.remove('menu-open');
       document.body.style.overflow = '';
     });
   });
