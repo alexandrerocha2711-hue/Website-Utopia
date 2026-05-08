@@ -60,8 +60,6 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
   color: #fff; margin-bottom: 16px;
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 6px 16px; background: rgba(0,255,65,0.06);
-  border: 1px solid rgba(0,255,65,0.12); border-radius: 100px;
 }
 
 @keyframes wave-hand {
