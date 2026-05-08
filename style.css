@@ -58,10 +58,28 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 
 .section-label {
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--neon); margin-bottom: 16px;
+  color: #fff; margin-bottom: 16px;
   display: inline-flex; align-items: center; gap: 10px;
   padding: 6px 16px; background: rgba(0,255,65,0.06);
   border: 1px solid rgba(0,255,65,0.12); border-radius: 100px;
+}
+
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave-emoji {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave-hand 2.5s infinite;
+  font-size: 1.1rem;
 }
 
 .section-title {
