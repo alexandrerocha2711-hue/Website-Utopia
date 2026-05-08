@@ -13,6 +13,10 @@ const tunnelSection = document.getElementById('tunnel-cta');
 if (tunnelSection) {
   initTunnelHero(tunnelSection);
 }
+const serviceHero = document.querySelector('.service-hero');
+if (serviceHero) {
+  initTunnelHero(serviceHero);
+}
 
 /* ========== SMOOTH SCROLLING (LENIS) ========== */
 const lenis = new Lenis({
