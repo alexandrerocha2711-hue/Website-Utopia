@@ -555,7 +555,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 
 .result-card {
   text-align: center;
-  padding: 40px 16px;
+  padding: 48px 24px;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
@@ -566,30 +566,39 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .result-card::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(0,255,65,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(0,255,65,0.08) 0%, transparent 70%);
   opacity: 0; transition: var(--transition);
 }
 .result-card:hover {
   border-color: var(--border-neon);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   background: rgba(255,255,255,0.04);
+  box-shadow: 0 20px 60px rgba(0,255,65,0.06);
 }
 .result-card:hover::before { opacity: 1; }
 
+.result-prefix {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 4px;
+}
 .result-number {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.8rem, 5vw, 4rem);
   font-weight: 900;
   color: var(--neon);
   letter-spacing: -0.04em;
   line-height: 1;
-  text-shadow: 0 0 40px rgba(0,255,65,0.2);
-  margin-bottom: 12px;
+  text-shadow: 0 0 60px rgba(0,255,65,0.25), 0 0 120px rgba(0,255,65,0.08);
+  margin-bottom: 14px;
 }
 .result-text {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  line-height: 1.5;
-  max-width: 140px;
+  line-height: 1.6;
+  max-width: 180px;
   margin: 0 auto;
 }
 
