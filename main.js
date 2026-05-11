@@ -13,10 +13,7 @@ const tunnelSection = document.getElementById('tunnel-cta');
 if (tunnelSection) {
   initTunnelHero(tunnelSection);
 }
-const serviceHero = document.querySelector('.service-hero');
-if (serviceHero) {
-  initTunnelHero(serviceHero);
-}
+/* Service hero tunnel removed — clean background only */
 
 /* ========== SMOOTH SCROLLING (LENIS) ========== */
 const lenis = new Lenis({
