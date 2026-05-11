@@ -35,10 +35,9 @@
           <span class="line"><span class="neon-text">Escala sem inchar a folha.</span></span>
         </h1>
         <p class="hero-subtitle">Cobrança, onboarding, relatórios e tarefas operacionais rodando sem toque humano. Liberdade para seu time focar no que importa.</p>
-
         <div class="hero-ctas">
           <a href="https://wa.me/5527988930629?text=Olá!%20Quero%20agendar%20um%20diagnóstico%20para%20Automação%20de%20Processos." target="_blank" class="btn-cta">Agendar diagnóstico <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <a href="#funnels" class="btn-secondary">Ver a solução</a>
+          <a href="#features" class="btn-secondary">Ver a solução</a>
         </div>
       </div>
     </div>
@@ -47,88 +46,52 @@
   <!-- O PROBLEMA -->
   <section class="about about-fullscreen" id="overview" style="padding: 120px 0;">
     <div class="container split-grid">
-      <!-- ELEMENTO (ESQUERDA) -->
       <div class="reveal reveal-stagger split-box" style="position: relative; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; background: linear-gradient(180deg, rgba(22, 22, 22, 0.8), var(--bg-pure)); padding: 48px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: 0 20px 40px rgba(0,0,0,0.4); backdrop-filter: blur(10px);">
         <div style="position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,255,65,0.3), transparent);"></div>
         <p style="margin-bottom: 24px; font-size: 1.3rem; color: var(--text-primary); font-weight: 500;">Funcionários brilhantes passando o dia preenchendo planilhas, enviando cobranças manuais e fazendo CTRL+C/CTRL+V de um sistema para o outro. Erros bobos custam clientes.</p>
         <p style="margin-bottom: 0;">O resultado aparece no balanço final: <strong style="color: var(--text-primary);">O crescimento é limitado pela quantidade de braços na operação.</strong> Para dobrar o faturamento, você precisa dobrar a equipe. Isso não é escala real.</p>
       </div>
-
-      <!-- FRASE (DIREITA) -->
       <div class="about-header reveal order-first-mobile" style="text-align: left; margin: 0;">
         <h2 class="section-title split-title" style="font-size: 3.2rem; line-height: 1.1; margin-bottom: 0;">Sua equipe custa caro para fazer trabalho<br/><span class="highlight">de estagiário.</span></h2>
       </div>
     </div>
   </section>
 
-  <!-- OS DOIS FUNIS (COMPARAÇÃO) -->
-  <section class="funnels-section" id="funnels">
+  <!-- COMO FUNCIONA — TIMELINE DE 3 ETAPAS -->
+  <section class="services" id="how" style="padding: 100px 0;">
     <div class="container">
-      <div class="funnels-header reveal">
-        <h2 class="section-title">O mesmo processo. <span class="highlight">Dois resultados.</span></h2>
-        <p class="section-subtitle">A diferença entre depender de força bruta vs arquitetura inteligente.</p>
+      <div class="services-header reveal">
+        <h2 class="section-title">O que acontece <span class="highlight">automaticamente:</span></h2>
+        <p class="section-subtitle">Cada evento na sua empresa dispara uma sequência exata — sem tocar no mouse.</p>
       </div>
-
-      <div class="funnels-grid reveal reveal-stagger">
-        <!-- Funil 1 (Vermelho) -->
-        <div class="funnel-container funnel-problem" style="border: none; background: transparent; padding: 0;">
-          <div class="funnel-title-box">
-            <h3>Operação Manual</h3>
-            <p>Dependente de esforço humano</p>
-          </div>
-          
-          <div class="visual-funnel-wrapper">
-            <div class="vf-bg"></div>
-            <div class="vf-content">
-              <div class="vf-block">Cadastro de Dados</div>
-              <div class="vf-label">Lento / Com Erros</div>
-              
-              <div class="vf-block">Cobrança Mensal</div>
-              <div class="vf-label">Inconsistente</div>
-              
-              <div class="vf-block">Onboarding</div>
-              <div class="vf-label">Atrasado</div>
-              
-              <div class="vf-block">Crescimento</div>
-              <div class="vf-label">Gargalo Humano</div>
-            </div>
-          </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px;" class="reveal reveal-stagger">
+        <!-- Step 1 -->
+        <div style="position: relative; padding: 40px 32px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); text-align: center; transition: var(--transition);" class="bento-item" onmouseover="this.style.borderColor='rgba(0,255,65,0.3)'" onmouseout="this.style.borderColor='var(--border-subtle)'">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0,255,65,0.08); border: 1px solid rgba(0,255,65,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.4rem; font-weight: 800; color: var(--neon);">1</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 10px;">Gatilho Detectado</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Novo lead, vencimento, pagamento confirmado, formulário enviado... qualquer evento no seu ecossistema.</p>
         </div>
-
-        <!-- Funil 2 (Verde) -->
-        <div class="funnel-container funnel-solution" style="border: none; background: transparent; padding: 0; box-shadow: none;">
-          <div class="funnel-title-box">
-            <h3>Com Automação</h3>
-            <p>Instantâneo e sem erro</p>
-          </div>
-          
-          <div class="visual-funnel-wrapper">
-            <div class="vf-bg"></div>
-            <div class="vf-content">
-              <div class="vf-block">Cadastro de Dados</div>
-              <div class="vf-label">Sincronizado</div>
-              
-              <div class="vf-block">Cobrança Mensal</div>
-              <div class="vf-label">Régua 100% Ativa</div>
-              
-              <div class="vf-block">Onboarding</div>
-              <div class="vf-label">Imediato</div>
-              
-              <div class="vf-block">Crescimento</div>
-              <div class="vf-label">Escala Infinita</div>
-            </div>
-          </div>
+        <!-- Step 2 -->
+        <div style="position: relative; padding: 40px 32px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); text-align: center; transition: var(--transition);" class="bento-item" onmouseover="this.style.borderColor='rgba(0,255,65,0.3)'" onmouseout="this.style.borderColor='var(--border-subtle)'">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0,255,65,0.08); border: 1px solid rgba(0,255,65,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.4rem; font-weight: 800; color: var(--neon);">2</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 10px;">Fluxo Executado</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">O sistema processa, valida e distribui os dados entre os sistemas certos — WhatsApp, CRM, ERP, E-mail — sem erro.</p>
+        </div>
+        <!-- Step 3 -->
+        <div style="position: relative; padding: 40px 32px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); text-align: center; transition: var(--transition);" class="bento-item" onmouseover="this.style.borderColor='rgba(0,255,65,0.3)'" onmouseout="this.style.borderColor='var(--border-subtle)'">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0,255,65,0.08); border: 1px solid rgba(0,255,65,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.4rem; font-weight: 800; color: var(--neon);">3</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 10px;">Resultado Entregue</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Cobrança enviada, cliente onboardado, relatório consolidado, time notificado. Tudo em milissegundos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VANTAGENS DO AGENTE -->
+  <!-- VANTAGENS -->
   <section class="agent-advantages reveal" style="padding: 80px 0;">
     <div class="container" style="display: flex; justify-content: center;">
       <div style="padding: 40px; background: rgba(16, 217, 130, 0.05); border: 1px solid rgba(16, 217, 130, 0.3); border-radius: var(--radius-lg); box-shadow: 0 0 40px rgba(16, 217, 130, 0.1); max-width: 900px; width: 100%;">
         <h2 class="section-title" style="margin-bottom: 32px; font-size: 1.8rem; text-align: center;">A Automação da Utopia <span class="highlight">NÃO:</span></h2>
-        
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; color: var(--text-primary); font-size: 1.1rem; font-weight: 500;">
             <li style="display: flex; align-items: center;"><span style="color: var(--neon); margin-right: 12px; font-size: 1.2rem;">✓</span>Comete erros de digitação (typos)</li>
@@ -145,7 +108,7 @@
     </div>
   </section>
 
-  <!-- COMO FUNCIONA (BENTO) -->
+  <!-- BENTO GRID -->
   <section class="services" id="features">
     <div class="container">
       <div class="services-header reveal">
@@ -168,7 +131,6 @@
           <h3>Relatórios Real-time</h3>
           <p>Chega de fechar planilha na sexta à noite. Dashboards consolidados que se atualizam sozinhos a cada nova movimentação e te alertam no Slack.</p>
         </div>
-        
         <div class="bento-item large reveal">
           <div class="bento-icon">🎯</div>
           <h3>Criado para operações complexas</h3>
@@ -189,7 +151,6 @@
   <!-- CTA FINAL -->
   <section class="cta-final" id="contact" style="position: relative; background: var(--neon); padding: 100px 0; min-height: auto;">
     <div style="position: absolute; top: 12px; left: 0; right: 0; height: 20px; background: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0,10 Q15,20 30,10 T60,10\' fill=\'none\' stroke=\'%23111\' stroke-width=\'3\'/%3E%3C/svg%3E') repeat-x; opacity: 0.8;"></div>
-    
     <div class="container">
       <div class="reveal" style="text-align: center;">
         <h2 class="section-title" style="margin-bottom: 40px; color: #000; letter-spacing: -1px;">Pare de gastar tempo com o que<br/><span style="color: #fff; text-shadow: none;">um robô faz melhor.</span></h2>
@@ -197,7 +158,6 @@
         <p style="font-size: 1rem; color: #111; margin-top: 24px; font-weight: 600;">Sem custo. Sem compromisso. Mapeamos seus gargalos na hora.</p>
       </div>
     </div>
-
     <div style="position: absolute; bottom: 12px; left: 0; right: 0; height: 20px; background: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0,10 Q15,20 30,10 T60,10\' fill=\'none\' stroke=\'%23111\' stroke-width=\'3\'/%3E%3C/svg%3E') repeat-x; opacity: 0.8;"></div>
   </section>
 
@@ -208,22 +168,10 @@
         <h2 class="section-title"><span class="highlight">F</span>AQ</h2>
       </div>
       <div class="faq-list reveal" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
-        <details class="faq-item">
-          <summary>Como sei o que pode ser automatizado?</summary>
-          <div class="faq-content">Durante nosso diagnóstico técnico, fazemos um raio-x da sua operação e listamos cada tarefa repetitiva que custa tempo e dinheiro. Nós desenhamos o mapa pra você.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Minha empresa usa sistemas muito antigos (legados), funciona?</summary>
-          <div class="faq-content">Se o sistema permite exportação de dados, conexão com banco de dados direto ou emulações RPA, conseguimos automatizar na grande maioria das vezes.</div>
-        </details>
-        <details class="faq-item">
-          <summary>O que acontece se a automação falhar?</summary>
-          <div class="faq-content">Nossas arquiteturas possuem tratamento de erro (Error Handling). Se um gatilho falhar por queda de API de terceiros, o sistema re-tenta automaticamente e avisa sua equipe via Slack ou WhatsApp.</div>
-        </details>
-        <details class="faq-item">
-          <summary>A automação de cobrança é fria e robótica?</summary>
-          <div class="faq-content">Não. Construímos réguas com linguagem humanizada, simulando pausas, mensagens de áudio e tons diferentes baseados no tipo de inadimplência. O cliente sente que está falando com o financeiro real.</div>
-        </details>
+        <details class="faq-item"><summary>Como sei o que pode ser automatizado?</summary><div class="faq-content">Durante nosso diagnóstico técnico, fazemos um raio-x da sua operação e listamos cada tarefa repetitiva que custa tempo e dinheiro. Nós desenhamos o mapa pra você.</div></details>
+        <details class="faq-item"><summary>Minha empresa usa sistemas muito antigos (legados), funciona?</summary><div class="faq-content">Se o sistema permite exportação de dados, conexão com banco de dados direto ou emulações RPA, conseguimos automatizar na grande maioria das vezes.</div></details>
+        <details class="faq-item"><summary>O que acontece se a automação falhar?</summary><div class="faq-content">Nossas arquiteturas possuem tratamento de erro (Error Handling). Se um gatilho falhar por queda de API de terceiros, o sistema re-tenta automaticamente e avisa sua equipe via Slack ou WhatsApp.</div></details>
+        <details class="faq-item"><summary>A automação de cobrança é fria e robótica?</summary><div class="faq-content">Não. Construímos réguas com linguagem humanizada, simulando pausas, mensagens de áudio e tons diferentes baseados no tipo de inadimplência. O cliente sente que está falando com o financeiro real.</div></details>
       </div>
     </div>
   </section>
