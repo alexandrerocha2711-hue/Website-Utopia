@@ -103,41 +103,46 @@
     </div>
   </section>
 
-  <!-- BENTO GRID -->
+  <!-- ENTREGÁVEIS — STACKED SHOWCASE CARDS -->
   <section class="services" id="features">
     <div class="container">
       <div class="services-header reveal">
         <h2 class="section-title">O que entregamos de verdade:</h2>
+        <p class="section-subtitle">Cada detalhe é pensado para reter atenção e gerar clique.</p>
       </div>
-      <div class="bento-grid">
-        <div class="bento-item large reveal">
-          <div class="bento-icon">✍️</div>
-          <h3>Copywriting & Neurodesign</h3>
-          <p>Unimos estética premium com textos altamente persuasivos. Posicionamos seus botões em zonas de calor corretas e usamos gatilhos de ancoragem visual para induzir a ação.</p>
-          <div style="display: flex; gap: 8px; margin-top: 16px;"><span class="bento-tag">Foco em CRO</span> <span class="bento-tag">Design Apple-like</span></div>
-        </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">⚡</div>
-          <h3>Velocidade Extrema (Nota 100)</h3>
-          <p>Não usamos WordPress. Nossas páginas são escritas em código limpo e hospedadas nas melhores CDNs Globais. Elas abrem em milissegundos no 4G.</p>
-        </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">🎢</div>
-          <h3>Experiência Fluida (Smooth Scroll)</h3>
-          <p>Retemos a atenção do usuário através de animações sutis e interações 3D (WebGL) que prendem o olhar e guiam a rolagem até o botão de compra.</p>
-        </div>
-        <div class="bento-item large reveal">
-          <div class="bento-icon">🎯</div>
-          <h3>Para quem é o Design High-End?</h3>
-          <p style="margin-bottom: 24px;">Empresas que precisam demonstrar autoridade, cobrar caro e converter muito.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="bento-tag">Lançamentos Digitais High-Ticket</span>
-            <span class="bento-tag">Empresas SaaS B2B (Software)</span>
-            <span class="bento-tag">Serviços Estéticos Premium (Clínicas)</span>
-            <span class="bento-tag">Mercado Imobiliário de Luxo</span>
-            <span class="bento-tag">Startups em busca de investimento</span>
-            <span class="bento-tag">Serviços Financeiros e Corretoras</span>
+
+      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 960px; margin: 48px auto 0;" class="reveal reveal-stagger">
+        <!-- Card 1 — Destaque -->
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 32px; padding: 44px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); align-items: center;">
+          <div style="font-size: 3.5rem; line-height: 1; color: var(--neon); font-weight: 900; opacity: 0.2;">01</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">✍️ Copywriting & Neurodesign</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">Unimos estética premium com textos altamente persuasivos. Posicionamos seus botões em zonas de calor corretas e usamos gatilhos de ancoragem visual para induzir a ação.</p>
+            <div style="display: flex; gap: 8px;"><span class="bento-tag">Foco em CRO</span><span class="bento-tag">Neurodesign</span><span class="bento-tag">Apple-like</span></div>
           </div>
+        </div>
+        <!-- Card 2 -->
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 32px; padding: 44px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); align-items: center;">
+          <div style="font-size: 3.5rem; line-height: 1; color: var(--neon); font-weight: 900; opacity: 0.2;">02</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">⚡ Velocidade Extrema (Nota 100)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">Não usamos WordPress. Nossas páginas são escritas em código limpo e hospedadas nas melhores CDNs Globais. Elas abrem em milissegundos no 4G.</p>
+            <div style="display: flex; gap: 8px;"><span class="bento-tag">Vite/Next.js</span><span class="bento-tag">CDN Global</span><span class="bento-tag">PageSpeed 100</span></div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 32px; padding: 44px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); align-items: center;">
+          <div style="font-size: 3.5rem; line-height: 1; color: var(--neon); font-weight: 900; opacity: 0.2;">03</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">🎢 Experiência Fluida (Smooth Scroll)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">Retemos a atenção do usuário através de animações sutis e interações 3D (WebGL) que prendem o olhar e guiam a rolagem até o botão de compra.</p>
+            <div style="display: flex; gap: 8px;"><span class="bento-tag">Lenis</span><span class="bento-tag">WebGL / Three.js</span><span class="bento-tag">GSAP</span></div>
+          </div>
+        </div>
+        <!-- Segmentos -->
+        <div style="padding: 36px; background: rgba(0,255,65,0.03); border: 1px solid rgba(0,255,65,0.1); border-radius: var(--radius-lg);">
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">🎯 Para quem é o Design High-End?</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;"><span class="bento-tag">Lançamentos High-Ticket</span><span class="bento-tag">SaaS B2B</span><span class="bento-tag">Clínicas Premium</span><span class="bento-tag">Imobiliário de Luxo</span><span class="bento-tag">Startups (Pitch)</span><span class="bento-tag">Financeiro e Corretoras</span></div>
         </div>
       </div>
     </div>

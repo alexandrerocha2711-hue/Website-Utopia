@@ -105,41 +105,46 @@
     </div>
   </section>
 
-  <!-- BENTO GRID -->
+  <!-- ENTREGÁVEIS — FASES DO PRODUTO -->
   <section class="services" id="features">
     <div class="container">
       <div class="services-header reveal">
         <h2 class="section-title">O que te entregamos:</h2>
+        <p class="section-subtitle">Um produto digital completo, da ideia à produção.</p>
       </div>
-      <div class="bento-grid">
-        <div class="bento-item large reveal">
-          <div class="bento-icon">🎨</div>
-          <h3>UX/UI Premium Nível Global</h3>
-          <p>Criamos interfaces intuitivas, rápidas e esteticamente deslumbrantes. O mesmo padrão de usabilidade usado pelos unicórnios do Vale do Silício.</p>
-          <div style="display: flex; gap: 8px; margin-top: 16px;"><span class="bento-tag">Figma</span> <span class="bento-tag">Design System</span> <span class="bento-tag">Micro-animações</span></div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border-subtle); border-radius: var(--radius-xl); overflow: hidden; margin-top: 48px;" class="reveal reveal-stagger">
+        <!-- Fase 1 -->
+        <div style="padding: 44px 32px; background: var(--bg-card);">
+          <div style="font-size: 0.65rem; font-weight: 700; color: var(--neon); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">Fase 01</div>
+          <div style="font-size: 2rem; margin-bottom: 16px;">🎨</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">Discovery & UX/UI</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">Imersão no seu negócio, mapeamento de jornada e prototipagem de alta fidelidade no Figma antes de qualquer código.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="bento-tag">Figma</span><span class="bento-tag">Design System</span></div>
         </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">🧱</div>
-          <h3>Arquitetura Escalável</h3>
-          <p>Seu sistema deve suportar de 10 a 100.000 usuários simultâneos. Usamos stacks modernas em bancos de dados robustos (PostgreSQL).</p>
+        <!-- Fase 2 -->
+        <div style="padding: 44px 32px; background: var(--bg-card);">
+          <div style="font-size: 0.65rem; font-weight: 700; color: var(--neon); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">Fase 02</div>
+          <div style="font-size: 2rem; margin-bottom: 16px;">🧱</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">Arquitetura & Dev</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">Desenvolvimento ágil com sprints semanais. Stack moderna preparada para escalar de 10 a 100.000 usuários.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="bento-tag">React/Next.js</span><span class="bento-tag">Node.js</span><span class="bento-tag">PostgreSQL</span></div>
         </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">🛡️</div>
-          <h3>Segurança & LGPD</h3>
-          <p>Criptografia ponta a ponta, autenticação multifator (MFA) e conformidade rigorosa com a LGPD Brasileira.</p>
+        <!-- Fase 3 -->
+        <div style="padding: 44px 32px; background: var(--bg-card);">
+          <div style="font-size: 0.65rem; font-weight: 700; color: var(--neon); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">Fase 03</div>
+          <div style="font-size: 2rem; margin-bottom: 16px;">🛡️</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">Deploy & Segurança</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">CI/CD, monitoramento 24/7, backups em tempo real, criptografia e conformidade LGPD. O código é 100% seu.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="bento-tag">AWS</span><span class="bento-tag">Docker</span><span class="bento-tag">LGPD</span></div>
         </div>
-        <div class="bento-item large reveal">
-          <div class="bento-icon">🎯</div>
-          <h3>Para quem é o desenvolvimento customizado?</h3>
-          <p style="margin-bottom: 24px;">Construímos produtos para operações que exigem diferenciação tecnológica absoluta.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="bento-tag">Startups B2B / Construção de MVP</span>
-            <span class="bento-tag">Sistemas de Gestão para Franquias</span>
-            <span class="bento-tag">Painéis de Logística e Rastreio</span>
-            <span class="bento-tag">Plataformas EAD Customizadas</span>
-            <span class="bento-tag">Saúde: Gestão de Clínicas e Prontuários</span>
-            <span class="bento-tag">Dashboards Financeiros Proprietários</span>
-          </div>
+      </div>
+
+      <!-- Segmentos -->
+      <div class="reveal" style="margin-top: 32px; padding: 36px; background: rgba(0,255,65,0.03); border: 1px solid rgba(0,255,65,0.1); border-radius: var(--radius-lg);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">🎯 Para quem é o desenvolvimento customizado?</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="bento-tag">Startups B2B / MVP</span><span class="bento-tag">Gestão de Franquias</span><span class="bento-tag">Logística e Rastreio</span><span class="bento-tag">Plataformas EAD</span><span class="bento-tag">Saúde: Clínicas e Prontuários</span><span class="bento-tag">Dashboards Financeiros</span>
         </div>
       </div>
     </div>

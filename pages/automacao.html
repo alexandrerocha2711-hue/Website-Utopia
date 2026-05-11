@@ -107,40 +107,48 @@
     </div>
   </section>
 
-  <!-- BENTO GRID -->
+  <!-- ENTREGÁVEIS — LAYOUT SEQUENCIAL COM NUMERAÇÃO -->
   <section class="services" id="features">
     <div class="container">
       <div class="services-header reveal">
         <h2 class="section-title">O que te entregamos:</h2>
+        <p class="section-subtitle">Cada módulo é construído sob medida para o seu processo.</p>
       </div>
-      <div class="bento-grid">
-        <div class="bento-item large reveal">
-          <div class="bento-icon">💸</div>
-          <h3>Réguas de Cobrança Inflexíveis</h3>
-          <p>Automação completa do fluxo de pagamentos, desde o lembrete de vencimento, falha no cartão, até a recuperação de inadimplência pesada via WhatsApp e E-mail.</p>
-          <div style="display: flex; gap: 8px; margin-top: 16px;"><span class="bento-tag">Asaas</span> <span class="bento-tag">Stripe</span> <span class="bento-tag">Pagar.me</span></div>
+
+      <div style="display: flex; flex-direction: column; gap: 0; max-width: 900px; margin: 48px auto 0;" class="reveal reveal-stagger">
+        <!-- Item 1 -->
+        <div style="display: flex; gap: 32px; padding: 40px 0; border-bottom: 1px solid var(--border-subtle); align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 64px; height: 64px; border-radius: 16px; background: rgba(0,255,65,0.06); border: 1px solid rgba(0,255,65,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">💸</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Réguas de Cobrança Inflexíveis</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px;">Automação completa do fluxo de pagamentos, desde o lembrete de vencimento, falha no cartão, até a recuperação de inadimplência pesada via WhatsApp e E-mail.</p>
+            <div style="display: flex; gap: 8px;"><span class="bento-tag">Asaas</span><span class="bento-tag">Stripe</span><span class="bento-tag">Pagar.me</span></div>
+          </div>
         </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">🤝</div>
-          <h3>Onboarding Mágico</h3>
-          <p>Seu novo cliente recebe acesso, portal, documentos e boas-vindas no WhatsApp no exato segundo da confirmação do pagamento. Zero espera.</p>
+        <!-- Item 2 -->
+        <div style="display: flex; gap: 32px; padding: 40px 0; border-bottom: 1px solid var(--border-subtle); align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 64px; height: 64px; border-radius: 16px; background: rgba(0,255,65,0.06); border: 1px solid rgba(0,255,65,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">🤝</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Onboarding Mágico</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px;">Seu novo cliente recebe acesso, portal, documentos e boas-vindas no WhatsApp no exato segundo da confirmação do pagamento. Zero espera.</p>
+            <div style="display: flex; gap: 8px;"><span class="bento-tag">WhatsApp</span><span class="bento-tag">E-mail</span><span class="bento-tag">Portal</span></div>
+          </div>
         </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">📊</div>
-          <h3>Relatórios Real-time</h3>
-          <p>Chega de fechar planilha na sexta à noite. Dashboards consolidados que se atualizam sozinhos a cada nova movimentação e te alertam no Slack.</p>
+        <!-- Item 3 -->
+        <div style="display: flex; gap: 32px; padding: 40px 0; border-bottom: 1px solid var(--border-subtle); align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 64px; height: 64px; border-radius: 16px; background: rgba(0,255,65,0.06); border: 1px solid rgba(0,255,65,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">📊</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Relatórios Real-time</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px;">Chega de fechar planilha na sexta à noite. Dashboards consolidados que se atualizam sozinhos a cada nova movimentação e te alertam no Slack.</p>
+            <div style="display: flex; gap: 8px;"><span class="bento-tag">Google Sheets</span><span class="bento-tag">Looker</span><span class="bento-tag">Slack Alerts</span></div>
+          </div>
         </div>
-        <div class="bento-item large reveal">
-          <div class="bento-icon">🎯</div>
-          <h3>Criado para operações complexas</h3>
-          <p style="margin-bottom: 24px;">Automação de processos críticos para segmentos que não podem errar.</p>
+        <!-- Item 4 — Segmentos -->
+        <div style="padding: 40px 0;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px;">🎯 Criado para operações complexas</h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Automação de processos críticos para segmentos que não podem errar.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="bento-tag">Operações Financeiras (Recuperação)</span>
-            <span class="bento-tag">Onboarding de SaaS B2B</span>
-            <span class="bento-tag">Info-produtos de Alto Volume</span>
-            <span class="bento-tag">Clínicas e Agendamentos em Massa</span>
-            <span class="bento-tag">RH e Recrutamento em Lote</span>
-            <span class="bento-tag">E-commerces e Logística</span>
+            <span class="bento-tag">Operações Financeiras</span><span class="bento-tag">Onboarding SaaS B2B</span><span class="bento-tag">Info-produtos</span><span class="bento-tag">Clínicas</span><span class="bento-tag">RH e Recrutamento</span><span class="bento-tag">E-commerces</span>
           </div>
         </div>
       </div>

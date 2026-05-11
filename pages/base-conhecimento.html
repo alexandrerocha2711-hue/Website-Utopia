@@ -107,41 +107,44 @@
     </div>
   </section>
 
-  <!-- BENTO GRID -->
+  <!-- ENTREGÁVEIS — LAYOUT LADO A LADO COM ÍCONE + BORDA VERDE -->
   <section class="services" id="features">
     <div class="container">
       <div class="services-header reveal">
         <h2 class="section-title">O que te entregamos:</h2>
+        <p class="section-subtitle">Uma infraestrutura de IA que aprende e responde com as suas regras.</p>
       </div>
-      <div class="bento-grid">
-        <div class="bento-item large reveal">
-          <div class="bento-icon">🧠</div>
-          <h3>Conecta com todas as suas fontes</h3>
-          <p>Nós plugamos a IA nos lugares onde a sua informação já existe hoje. Não precisa refazer o trabalho. A IA lê, vetoriza e entende tudo em questão de segundos.</p>
-          <div style="display: flex; gap: 8px; margin-top: 16px;"><span class="bento-tag">Notion</span> <span class="bento-tag">Google Drive</span> <span class="bento-tag">Zendesk / PDFs</span></div>
-        </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">📑</div>
-          <h3>Respostas com Citação Exata</h3>
-          <p>A IA não joga apenas um texto. Ela responde a dúvida operacional e adiciona o link exato do PDF ou página do Notion de onde tirou a informação.</p>
-        </div>
-        <div class="bento-item medium reveal">
-          <div class="bento-icon">💬</div>
-          <h3>Chat dentro da sua empresa</h3>
-          <p>Sem portais complexos. Colocamos o bot da IA diretamente dentro do Slack, Microsoft Teams ou grupo de WhatsApp que sua equipe já usa hoje.</p>
-        </div>
-        <div class="bento-item large reveal">
-          <div class="bento-icon">🎯</div>
-          <h3>Para quem é a Inteligência Interna?</h3>
-          <p style="margin-bottom: 24px;">Operações que possuem altíssima carga de regras, manuais e documentações extensas.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="bento-tag">Suporte Técnico (Help Desk N1 e N2)</span>
-            <span class="bento-tag">Clínicas e Hospitais (Protocolos Médicos)</span>
-            <span class="bento-tag">SDRs e Equipes de Venda B2B</span>
-            <span class="bento-tag">RH Estratégico (Dúvidas CLT/Benefícios)</span>
-            <span class="bento-tag">Escritórios de Advocacia (Jurisprudência)</span>
-            <span class="bento-tag">Indústrias (Manuais de Maquinário)</span>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px;" class="reveal reveal-stagger">
+        <!-- Card principal full width -->
+        <div style="grid-column: 1 / -1; display: flex; gap: 24px; padding: 40px; background: var(--bg-card); border-left: 3px solid var(--neon); border-radius: var(--radius-lg);">
+          <span style="font-size: 2.5rem; flex-shrink: 0;">🧠</span>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Conecta com todas as suas fontes</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">Nós plugamos a IA nos lugares onde a sua informação já existe hoje. A IA lê, vetoriza e entende tudo em segundos.</p>
+            <div style="display: flex; gap: 8px;"><span class="bento-tag">Notion</span><span class="bento-tag">Google Drive</span><span class="bento-tag">Zendesk</span><span class="bento-tag">PDFs</span></div>
           </div>
+        </div>
+        <!-- Card 2 -->
+        <div style="display: flex; gap: 20px; padding: 36px; background: var(--bg-card); border-left: 3px solid var(--neon); border-radius: var(--radius-lg);">
+          <span style="font-size: 2rem; flex-shrink: 0;">📑</span>
+          <div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">Respostas com Citação Exata</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">A IA responde a dúvida e adiciona o link exato do PDF ou Notion de onde tirou a informação. Verificável em 1 clique.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div style="display: flex; gap: 20px; padding: 36px; background: var(--bg-card); border-left: 3px solid var(--neon); border-radius: var(--radius-lg);">
+          <span style="font-size: 2rem; flex-shrink: 0;">💬</span>
+          <div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">Chat dentro da sua empresa</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Sem portais complexos. O bot vive dentro do Slack, Teams ou WhatsApp que sua equipe já usa hoje.</p>
+          </div>
+        </div>
+        <!-- Segmentos -->
+        <div style="grid-column: 1 / -1; padding: 36px; background: rgba(0,255,65,0.03); border: 1px solid rgba(0,255,65,0.1); border-radius: var(--radius-lg);">
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">🎯 Para quem é a Inteligência Interna?</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;"><span class="bento-tag">Suporte Técnico (N1/N2)</span><span class="bento-tag">Clínicas e Hospitais</span><span class="bento-tag">SDRs B2B</span><span class="bento-tag">RH (CLT/Benefícios)</span><span class="bento-tag">Advocacia</span><span class="bento-tag">Indústrias (Manuais)</span></div>
         </div>
       </div>
     </div>
