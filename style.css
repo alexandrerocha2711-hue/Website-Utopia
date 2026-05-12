@@ -242,42 +242,77 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+  /* Ambient drifting glow */
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0,255,65,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0,255,65,0.04) 0%, transparent 50%);
+  background-size: 150% 150%;
+  animation: ambient-drift 20s ease-in-out infinite alternate;
 }
-/* Subtle dot grid — depth layer */
+
+@keyframes ambient-drift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 50% 100%; }
+}
+
+/* Subtle moving dot grid — depth layer */
 .service-hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, black 10%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, black 10%, transparent 70%);
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, black 20%, transparent 70%);
+  animation: grid-shift 15s linear infinite;
   pointer-events: none;
   z-index: 0;
 }
-/* Bottom accent line */
+
+@keyframes grid-shift {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* Bottom pulsing accent line */
 .service-hero::before {
   content: '';
   position: absolute;
   bottom: 0; left: 10%; right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0,255,65,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0,255,65,0.4), transparent);
+  animation: pulse-line 4s ease-in-out infinite alternate;
   z-index: 1;
 }
-/* Concentric ring — depth accent */
+
+@keyframes pulse-line {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* Concentric rings — expanding and fading slowly */
 .service-hero .container::before {
   content: '';
   position: absolute;
-  width: 500px; height: 500px;
+  width: 600px; height: 600px;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.03);
   box-shadow:
-    0 0 0 80px rgba(255,255,255,0.01),
-    0 0 0 160px rgba(255,255,255,0.005);
+    inset 0 0 60px rgba(0,255,65,0.02),
+    0 0 0 120px rgba(255,255,255,0.015),
+    0 0 0 240px rgba(255,255,255,0.005);
+  animation: pulse-ring 12s ease-in-out infinite alternate;
   pointer-events: none;
   z-index: 0;
+}
+
+@keyframes pulse-ring {
+  0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
 }
 .service-hero .hero-content {
   margin: 0 auto;
