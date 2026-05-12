@@ -1015,3 +1015,18 @@ section { position: relative; contain: layout style; }
     padding: 32px !important;
   }
 }
+
+/* Wavy Border fix for Safari/iOS gaps */
+.wavy-border {
+  position: absolute;
+  left: 0; right: 0;
+  height: 20px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA2MCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNLTMwLDEwIFEtMTUsMCAwLDEwIFQzMCwxMCBUNjAsMTAgVDkwLDEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxMTEiIHN0cm9rZS13aWR0aD0iMyIvPjwvc3ZnPg==');
+  background-repeat: repeat-x;
+  background-size: 60px 20px;
+  opacity: 0.8;
+  z-index: 10;
+  pointer-events: none;
+}
+.wavy-border.top { top: 12px; }
+.wavy-border.bottom { bottom: 12px; }
