@@ -243,16 +243,19 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   justify-content: center;
   position: relative;
 }
+/* Subtle dot grid — depth layer */
 .service-hero::after {
   content: '';
   position: absolute;
-  width: 700px; height: 700px;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(0,255,65,0.04) 0%, transparent 65%);
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, black 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, black 10%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
+/* Bottom accent line */
 .service-hero::before {
   content: '';
   position: absolute;
@@ -260,6 +263,21 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(0,255,65,0.2), transparent);
   z-index: 1;
+}
+/* Concentric ring — depth accent */
+.service-hero .container::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow:
+    0 0 0 80px rgba(255,255,255,0.01),
+    0 0 0 160px rgba(255,255,255,0.005);
+  pointer-events: none;
+  z-index: 0;
 }
 .service-hero .hero-content {
   margin: 0 auto;
